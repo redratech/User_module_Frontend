@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api/users";
+const API_URL = "https://user-module-backend.onrender.com/api/users";
 
 export const createUserApi = async (formData) => {
   const response = await axios.post(API_URL, formData, {
@@ -32,4 +32,4 @@ export const deleteUserApi = async (id) => {
   const response = await axios.delete(`${API_URL}/${id}`);
 
   return response.data;
-};
+};
